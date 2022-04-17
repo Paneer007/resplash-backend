@@ -22,12 +22,9 @@ imageRouter.get('/',async (req,res)=>{
 })
 imageRouter.delete('/delete',async (req,res)=>{
     const {password,id}=req.body
-    console.log(password)
     const result = await Image.findById(id)
     const hashPass= result.password
-    console.log(hashPass)
     const comparisonResult = await bcrypt.compare(password,hashPass);
-    console.log(comparisonResult)
     if(comparisonResult){
         const result = await Image.deleteOne({_id:id})
         res.status(200).send('sent')
@@ -53,14 +50,10 @@ imageRouter.post('/upload',fileUpload.single('file'),(req,res,next)=>{
     }
     async function upload(req){
         try{
-            console.log(req.body.password)
             const saltround=10
             let result = await streamUpload(req)
-            console.log(0)
             const passwordHash= await bcrypt.hash(req.body.password,saltround)
-            console.log(2)
             const userImage = await new Image({link:result.secure_url,password:passwordHash,Date:new Date(),label:req.body.label})
-            console.log(4)
             const finalResult = await userImage.save()
             res.status(200).send('done :D')
         }catch{

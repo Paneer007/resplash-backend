@@ -6,9 +6,8 @@ const imageRouter = require('./controller/images')
 const mongoose=require('mongoose')
 try{
     const res= mongoose.connect(process.env.MONGODB_URL)
-    console.log('connected')
 }catch(error){
-    console.log(error)
+    null
 }
 app.use(express.json())
 app.use(cors())
