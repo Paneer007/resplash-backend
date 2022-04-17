@@ -12,4 +12,5 @@ try{
 app.use(express.json())
 app.use(cors())
 app.use('/photos',imageRouter)
+app.use(express.static('build'))
 module.exports=app

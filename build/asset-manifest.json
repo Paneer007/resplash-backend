@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90c3231e.css",
+    "main.js": "/static/js/main.edb7e99c.js",
+    "static/media/greenCheck.png": "/static/media/greenCheck.6832415ce9089f0a6c14.png",
+    "static/media/my_unsplash_logo.svg": "/static/media/my_unsplash_logo.c888ca72341518f28eb4c46adc4836f2.svg",
+    "index.html": "/index.html",
+    "main.90c3231e.css.map": "/static/css/main.90c3231e.css.map",
+    "main.edb7e99c.js.map": "/static/js/main.edb7e99c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90c3231e.css",
+    "static/js/main.edb7e99c.js"
+  ]
+}
